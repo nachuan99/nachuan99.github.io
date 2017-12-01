@@ -1,0 +1,686 @@
+@charset "UTF-8";
+
+body, input, button {
+	font-family: 'Roboto', sans-serif;
+}
+
+body {
+	background: #edf0f1;
+	border: 1px #edf0f1 solid; 
+}
+
+.page, .subPage {
+	min-width: 500px;
+}
+
+#home, #message{
+	margin: auto;
+	display: block;
+}
+
+#home, #message, .map {
+	max-width: 600px;
+}
+
+/*for header*/
+
+header {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	background: white;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+	padding: 10px;
+	text-align: center;
+}
+
+header h2 {
+	padding-top: 10px;
+}
+
+header p {
+	position: absolute;
+	top: 0;
+	left: 0px;
+	cursor: pointer;
+	padding-left: 25px;
+	font-size: 18px;
+	padding-top: 28px;
+	color: #1B9AF7;
+}
+
+header h5 {
+	position: absolute;
+	right: 0;
+	top: 0;
+	cursor: pointer;
+	padding-right: 25px;
+	font-size: 18px;
+	color: #1B9AF7;
+	font-weight: normal;
+	padding-top: 28px;
+}
+
+/*for footer*/
+
+footer {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	z-index: 5;
+	background: white;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	box-shadow: 0px -2px 4px rgba(44,62,80,0.15);
+
+	padding: 10px;
+}
+
+#tabBar {
+	min-width: 500px;
+}
+
+footer .tabBarBottom {
+	width: 20%;
+	float: left;
+	height: 60px;
+	font-size: 12px;
+
+	cursor: pointer;
+}
+
+
+footer .tabBarBottom p {
+	text-align: center;
+	line-height: 15px;
+}
+
+footer .tabBarBottom svg {
+	width: 45px;
+	height: 45px;
+	margin: auto;
+	display: block;
+	padding: 5px;
+}
+
+/*for button*/
+
+.activeButton {
+	fill: #1B9AF7;
+}
+
+.activeText {
+	color: #1B9AF7;
+}
+
+.activeButtonBG {
+	background: rgba(0,0,0,0.5);
+	transition: background-color 1000ms ease;
+}
+
+/*for page me*/
+
+#profile {
+	width: 100%;
+	height: 220px;
+	background: white;
+	padding: 25px;
+	box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+}
+
+#profilePhoto {
+	width: 100px;
+	height: 100px;
+	float: left;
+	margin-left: 25px;
+}
+
+
+#profilePhoto img {
+	width: 100px;
+	border-radius: 10px;
+}
+
+#profileInfo {
+	height: 100px;
+	float: left;
+	padding: 20px;
+}
+
+#profile h3 {
+	font-size: 24px;
+	height: 30px;
+	color: grey;
+}
+
+#profile h5 {
+	font-size: 16px;
+	font-weight: bold;
+	height: 28px;
+}
+
+#profile p {
+	font-size: 14px;
+	height: 22px;
+}
+
+#accountInfo {
+	width: 100%;
+	height: 100px;
+	clear: both;
+	padding-top: 27px;
+}
+
+#accountInfo .accountInfoBox {
+	height: 100%;
+	float: left;
+	width: 33.3%;
+	text-align: center;
+}
+
+#meList {
+	width: 100%;
+	padding: 25px 50px;
+}
+
+#meList .meListItem {
+	width: 100%;
+	height: 60px;
+	border-bottom: 3px white solid;
+	padding-top: 20px;
+
+	cursor: pointer;
+}
+
+#meList .meListItem p {
+	font-size: 16px;
+	height: 20px;
+}
+
+/*for page message*/
+#message {
+	padding: 25px 50px;
+}
+.conversation {
+	width: 100%;
+	height: 100px;
+	background: white;
+	margin-bottom: 25px;
+	box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+	border-radius: 10px;
+
+	cursor: pointer;
+}
+
+.conversation img {
+	width: 100px;
+	height: 100px;
+	float: left;
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+
+.conversation .conversationInfo {
+	padding: 20px;
+	float: left;
+}
+
+.conversation .conversationInfo h5 {
+	font-size: 16px;
+	height: 24px;
+}
+
+.conversation .conversationInfo p {
+	font-size: 14px;
+	color: grey;
+}
+
+/*for message detail*/
+
+#conversationPage .dialog {
+	height: 400px;
+	width: 100%;
+	margin-top: 100px;
+	text-align: center;
+	padding: 0 50px;
+}
+
+#conversationPage .type svg{
+	height: 60px;
+	width: 60px;
+	float: left;
+	cursor: pointer;
+}
+
+#conversationPage .type {
+	height: 70px;
+	width: 100%;
+	position: absolute;
+	bottom: 0px;
+	background: white;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+#conversationPage .dialog img {
+	width: 60px;
+	height: 60px;
+	float: left;
+	border-radius: 10px;
+}
+
+#conversationPage .dialog p {
+	height: 24px;
+}
+
+#conversationPage .dialog .sentence {
+	border-radius: 10px;
+	padding: 20px;
+	height: 60px;
+	float: left;
+	background: white;
+	box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+	margin-left: 20px;
+}
+
+#conversationPage svg {
+	fill: grey;
+	padding-top: 10px;
+}
+
+#conversationPage #emoji {
+	float: right;
+}
+
+#conversationPage input {
+	width: calc(100% - 120px);
+	height: 60px;
+	border: 0px;
+	text-indent: 25px;
+	border-radius: 10px;
+	float: left;
+	background: rgba(44,62,80,0.10);
+}
+
+
+/*for page home*/
+
+#home {
+	padding: 25px 50px;
+}
+
+.post {
+	width: 100%;
+	height: 350px;
+	background: white;
+	margin-bottom: 25px;
+	box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+	border-radius: 10px;
+	padding: 25px;
+
+	cursor: pointer;
+}
+
+.post .postInfo img {
+	width: 60px;
+	height: 60px;
+	float: left;
+	border-radius: 10px;
+	margin-right: 20px;
+}
+
+.post h5 {
+	float: left;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.post p {
+	float: left;
+	font-size: 12px;
+	color: grey;
+	margin-right: 16px;
+	margin-top: 10px;
+}
+
+.post .postPic {
+	clear: both;
+}
+
+.post .postPic .container{
+	width: 100%;
+	height: 190px;
+	overflow: hidden;
+	padding-top: 20px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+.post .postPic img{
+	width: 100%;
+}
+
+.post .postInteraction {
+	width: 100%;
+	height: 50px;
+}
+
+.like, .comment, .share {
+	width: 33.3%;
+	height: 50px;
+	float: left;
+	padding-top: 15px;
+}
+
+.like,
+.comment {
+	padding-top: 20px;
+}
+
+.share {
+	padding-top: 10px;
+}
+
+.like svg,
+.comment svg,
+.share svg {
+	display: block;
+	margin: auto;
+}
+
+.share svg {
+	width: 50px;
+	height: 50px;
+}
+
+.comment svg {
+	width: 40px;
+	height: 40px;
+}
+
+.like svg {
+	width: 36px;
+	height: 36px;
+}
+
+.liked {
+	fill: pink;
+	stroke: pink;
+	stroke-width: 15px;
+}
+
+.notLiked {
+	fill: white;
+	stroke: black;
+	stroke-width: 5px;
+}
+
+#home {
+	margin-bottom: 60px;
+}
+
+/*for wishlist*/
+
+#wishlist {
+	width: 100%;
+	position: absolute;
+	top: 80px;
+	padding: 40px 50px 100px 50px;
+}
+
+#wishlistPost .post {
+	width: 100%;
+	margin: auto;
+	display: block;
+	margin-bottom: 25px;
+	max-width: 500px;
+}
+
+#wishlistPost {
+	width: 100%;
+	position: relative;
+}
+
+/*for discover*/
+
+#discover input {
+	width: 100%;
+	height: 60px;
+	border: 0px;
+	text-indent: 25px;
+}
+#discover .tabBar {
+	width: 100%;
+	height: 80px;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	z-index: 5;
+	background: white;
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
+	box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+	border-top: 1px solid rgba(44,62,80,0.15);
+	padding: 10px;
+}
+
+#discover .tabBarBottom {
+	width: 25%;
+	float: left;
+	height: 60px;
+	font-size: 12px;
+
+	cursor: pointer;
+}
+
+
+#discover .tabBarBottom p {
+	text-align: center;
+	line-height: 15px;
+}
+
+#discover .tabBarBottom svg {
+	width: 45px;
+	height: 45px;
+	margin: auto;
+	display: block;
+	padding: 5px;
+}
+
+/*for timeline*/
+
+#timeline {
+	padding: 100px 50px;
+}
+
+.map {
+	width: 100%;
+	display: block;
+	margin: auto;
+	max-width: 500px;
+	border-radius: 10px;
+}
+
+.map .container{
+	width: 100%;
+	overflow: hidden;
+	border-radius: 10px;
+	height: 250px;
+	background: grey;
+}
+
+.map img{
+	width: 100%;
+	min-height: 250px;
+}
+
+#timeline .timeline {
+	width: 100%;
+	max-width: 500px;
+	display: block;
+	margin: auto;
+	padding-top: 50px;
+}
+
+#timeline .item {
+	width: 100%;
+	height: 100px;
+	background: white;
+	margin-bottom: 25px;
+	border-radius: 10px;
+	box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+}
+
+#timeline .icon {
+	width: 30px;
+	height: 30px;
+	margin-top: 35px;
+}
+
+#timeline svg {
+	float: left;
+}
+
+
+#timeline p {
+	font-size: 14px;
+	padding-left: 40px;
+	padding-top: 40px;
+	float: left;
+}
+
+ 
+#timeline h5 {
+	font-size: 16px;
+	padding-left: 20px;
+	padding-top: 38px;
+	float: left;
+}
+
+#timeline .add {
+	height: 100px;
+	width: 100%;
+	max-width: 500px;
+	display: block;
+	margin:auto;
+}
+
+#timeline #addIcon {
+	float: right;
+	width: 100px;
+	height: 100px;
+	fill: #1B9AF7;
+	cursor: pointer;
+}
+
+/*for my journey
+*/
+
+#myJourney {
+	padding: 0 50px;
+}
+
+#myJourneyPost {
+	padding-top: 100px;
+	max-width: 500px;
+	display: block;
+	margin: auto;
+}
+/*
+Post Journey*/
+
+#postJourney {
+	padding: 0 50px;
+}
+
+#postJourney .journeyInfo {
+	width: 100%;
+	margin: 100px auto 0 auto;
+	max-width: 500px;
+	display: block;
+}
+
+#postJourney .journeyInfo p {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+#postJourney input {
+	width: 100%;
+	height: 60px;
+	border: 0px;
+	text-indent: 25px;
+	border-radius: 10px;
+}
+
+/*post preview*/
+
+#journeyPreview .content {
+	padding: 100px 50px 0 50px;
+	display: block;
+	margin: auto;
+	min-width: 500px;
+}
+
+#journeyPreview .content .info {
+	width: 100%;
+	height: 120px;
+	background: white;
+	max-width: 500px;
+	display: block;
+	margin: 25px auto 0 auto;
+	padding: 25px;
+	font-size: 14px;
+	line-height: 24px;
+	border-radius: 10px;
+	box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+}
+
+#journeyPreview .content .days {
+	margin-bottom: 100px;
+}
+
+#journeyPreview .content .day {
+	width: 100%;
+	height: 280px;
+	background: white;
+	max-width: 500px;
+	display: block;
+	margin: 25px auto 25px auto;
+	padding: 25px;
+	font-size: 14px;
+	line-height: 24px;
+	border-radius: 10px;
+	box-shadow: 0px 2px 4px rgba(44,62,80,0.15);
+}
+
+#journeyPreview .content .day .container{
+	width: 100%;
+	height: 190px;
+	overflow: hidden;
+	padding-top: 20px;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+
+#journeyPreview .content .day .container img{
+	width: 100%;
+}
+
+#journeyPreview p {
+	float: left;
+}
+
+#tripLocationR, 
+#tripDateR,
+#tripDesR {
+	padding-left: 10px;
+}
+
