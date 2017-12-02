@@ -62,7 +62,7 @@ $(".backButtonForPostJourney").on("click", function() {
 
 $(".backButtonForMessage").on("click", function() {
 	$("#conversationPage").hide();
-	$("#message").fadeIn(500);
+	$("#message, #tabBar").fadeIn(500);
 });
 
 // tabBarBottom
@@ -71,7 +71,7 @@ $(".backButtonForMessage").on("click", function() {
 $("#tabBar .tabBarBottom").on("click", e => {
 	var index = $(e.currentTarget).index();
 	var page = $($(".page")[index]);
-	$(".page, .subPage, #discover .tabBar").hide();
+	$(".page, .subPage, #discover .tabBar, .backButtonForDiscover").hide();
 	page.fadeIn(500);
 });
 
@@ -159,6 +159,12 @@ $("#conversation1").on("click", function() {
 
 // discover
 $("#searchInput").focus(function() {
-	$("#discover .tabBar").fadeIn(500);
+	$("#discover .tabBar ,.backButtonForDiscover").fadeIn(500);
+	$("#tabBar").hide()
+});
+
+$(".backButtonForDiscover").on("click", function() {
+	$("#discover, #tabBar").fadeIn(500);
+	$("#discover .tabBar, .backButtonForDiscover").hide();
 });
 
